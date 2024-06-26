@@ -1,106 +1,93 @@
+import { motion } from "framer-motion";
+import ethLogoCircle from "@/assets/eth-logo-circle.svg";
 import innerCircle from "@/assets/inner-circle.svg";
 import midCircle from "@/assets/mid-circle.svg";
 import outerCircle from "@/assets/outer-circle.svg";
 import { Button } from "./components/ui/button";
-import { useScroll, motion } from "framer-motion";
 import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { ModeToggle } from "./components/ui/mode-toggle";
 
-function App() {
-  const { scrollYProgress } = useScroll();
-
+export default function App() {
   return (
-    <main className="flex flex-col w-full h-full bg-background text-foreground relative">
-      <motion.div
-        style={{ scaleX: scrollYProgress }}
-        className="bg-green-500 fixed w-full top-0 left-0 right-0 pb-2 z-10"
-      />
+    <div className="bg-background text-foreground min-h-screen flex flex-col sm:flex-row overflow-hidden">
+      <div className="dark:bg-zinc-900 bg-zinc-400 p-4 sm:flex-col flex gap-4">
+        <Button variant="secondary">
+          <DiscordLogoIcon className="w-6 h-6" />
+        </Button>
+        <Button variant="secondary">
+          <TwitterLogoIcon className="w-6 h-6" />
+        </Button>
+        <ModeToggle />
+      </div>
 
-      <div className="bg-black border-black grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
-        <section className="bg-white p-16 relative rounded-xl lg:col-span-2">
-          <h1 className="text-4xl font-manrope font-semibold uppercase block items-center">
-            <span className="inline-block max-w-xl w-min h-min pr-4">
-              Hyperspeeding Ethereum into{" "}
-            </span>
-            <span className="w-min text-8xl font-sans font-bold text-green-500">
-              2077
-            </span>
-          </h1>
-          <p className="max-w-xl text-xl">
-            We are a league of creatives, researchers, developers, and marketers
-            committed to making Ethereum cool again.
-          </p>
-          <div className="flex flex-row mt-4 gap-2 text-xl">
-            <Button asChild>
-              <a href="https://discord.com/invite/7cFD4ca9">
-                <DiscordLogoIcon className="mr-2 h-6 w-6" />
-                Discord
-              </a>
-            </Button>
-            <Button asChild>
-              <a href="https://x.com/2077Collective">
-                <TwitterLogoIcon className="mr-2 h-6 w-6" /> Twitter
-              </a>
-            </Button>
+      <div className="w-full">
+        <header className="p-8 relative w-full h-screen">
+          <h1 className="text-3xl">We are the 2077 Collective.</h1>
+          <div className="text-transparent bg-clip-text bg-gradient-to-b from-zinc-800 to-zinc-400 dark:from-zinc-100 dark:to-zinc-600 text-xl">
+            <h1>Nosotros somos el Colectivo 2077.</h1>
+            <h1> Wir sind das 2077 Kollektiv.</h1>
+            <h1>我们是 2077 集体。</h1>
+            <h1>Мы Коллектив 2077.</h1>
+            <h1>نحن مجموعة 2077.</h1>
           </div>
-        </section>
-        <section className="bg-white px-8 py-8 rounded-xl">
-          <div className="text-xl space-y-2">
-            <p className="font-semibold text-2xl">
-              The problem:{" "}
-              <span className="underline underline-offset-4">
-                lack of marketing
-              </span>
-              .
-            </p>
-            <ul className="text-lg">
-              <p>Being perceived as a boomer chain.</p>
-              <p>Elite human capital stuck on Farcaster.</p>
-              <p>A narrative controlled by Solana.</p>
-            </ul>
-            <hr />
-
-            <p>Without marketing, what use is building?</p>
-            <p>Even within Crypto Twitter, many are unaware of L2 scaling.</p>
-            <p className="font-semibold">
-              As such, we are about to flip this state of affairs upside-down.
-            </p>
-          </div>
-        </section>
-        <section className="bg-white rounded-xl flex">
-          <p className="text-center mx-auto my-auto">
-            Replace this with an image.
+          <p className="mt-8 font-bold text-xl max-w-xl">
+            <span>We are</span>{" "}
+            <span className="bg-pink-400 dark:bg-pink-700 px-1 inline-block">
+              creatives
+            </span>
+            ,
+            <span className="bg-blue-400 dark:bg-blue-700 px-1 inline-block">
+              researchers
+            </span>
+            ,
+            <span className="bg-green-400 dark:bg-green-700 px-1 inline-block">
+              marketers
+            </span>
+            , and{" "}
+            <span className="bg-orange-600 px-1 inline-block">developers</span>{" "}
+            all working to make Ethereum cool again.
           </p>
+          <img
+            className=" w-1/2 absolute top-0 right-0 -mr-48 lg:-mr-64"
+            src={ethLogoCircle}
+          />
+          <div className="hidden sm:block">
+            <motion.img
+              animate={{ rotate: 360 }}
+              transition={{
+                repeat: Infinity,
+                ease: "linear",
+                duration: 60,
+              }}
+              className=" w-1/2 absolute top-0 right-0 -mr-48 lg:-mr-64"
+              src={outerCircle}
+            />
+            <motion.img
+              animate={{ rotate: -360 }}
+              transition={{
+                repeat: Infinity,
+                ease: "linear",
+                duration: 50,
+              }}
+              className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
+              src={midCircle}
+            />
+            <motion.img
+              animate={{ rotate: 360 }}
+              transition={{
+                repeat: Infinity,
+                ease: "linear",
+                duration: 40,
+              }}
+              className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
+              src={innerCircle}
+            />
+          </div>
+        </header>
+        <section>
+          <p className="text-xl">In the</p>
         </section>
       </div>
-      <div className="dark bg-background h-screen p-4">
-        <div className="relative h-96 flex items-center justify-center fill-white">
-          <img className="absolute" src={outerCircle} />
-          <img className="absolute" src={midCircle} />
-          <img className="absolute" src={innerCircle} />
-        </div>
-      </div>
-      <section className="dark bg-background text-foreground h-screen p-8">
-        <div className="max-w-3xl space-y-4 pt-16">
-          <p className="text-4xl">Solana has marketing. Why not Ethereum?</p>
-          <p className="text-4xl font-medium">Well, that's what we are.</p>
-          <div className="space-x-4">
-            <Button asChild>
-              <a href="https://discord.com/invite/7cFD4ca9">
-                <DiscordLogoIcon className="mr-2 h-6 w-6" />
-                Discord
-              </a>
-            </Button>
-            <Button asChild>
-              <a href="https://x.com/2077Collective">
-                <TwitterLogoIcon className="mr-2 h-6 w-6" /> Twitter
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-      <footer></footer>
-    </main>
+    </div>
   );
 }
-
-export default App;
