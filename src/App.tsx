@@ -6,12 +6,9 @@ import outerCircle from "@/assets/outer-circle.svg";
 import darkInnerCircle from "@/assets/dark-inner-circle.svg";
 import darkMidCircle from "@/assets/dark-mid-circle.svg";
 import darkOuterCircle from "@/assets/dark-outer-circle.svg";
+import animeGirlImage from "@/assets/anime-girl.png";
 import { Button } from "./components/ui/button";
-import {
-  DiscordLogoIcon,
-  TriangleDownIcon,
-  TwitterLogoIcon,
-} from "@radix-ui/react-icons";
+import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { ModeToggle } from "./components/ui/mode-toggle";
 import { useTheme } from "./components/theme-provider";
 import { ChevronDownIcon } from "lucide-react";
@@ -149,11 +146,11 @@ export default function App() {
         <section className="mx-8 my-8">
           <label>
             <img
-              src=""
-              className="w-full h-96 rounded-3xl border border-foreground"
+              src={animeGirlImage}
+              className="w-full rounded-3xl border border-foreground"
             ></img>
             <p className="text-center text-muted-foreground">
-              A picture of a man standing above a cliff.
+              A real photograph of an Ethereum user in its natural habitat.
             </p>
           </label>
         </section>
