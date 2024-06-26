@@ -6,12 +6,17 @@ import outerCircle from "@/assets/outer-circle.svg";
 import darkInnerCircle from "@/assets/dark-inner-circle.svg";
 import darkMidCircle from "@/assets/dark-mid-circle.svg";
 import darkOuterCircle from "@/assets/dark-outer-circle.svg";
-import animeGirlImage from "@/assets/anime-girl.png";
-import { Button } from "./components/ui/button";
+import whiteLogo from "@/assets/2077-logo-text-white.svg";
+import blackLogo from "@/assets/2077-logo-text-black.svg";
+import whiteIconLogo from "@/assets/2077-logo-white.svg";
+import blackIconLogo from "@/assets/2077-logo-black.svg";
+import { Button } from "@/components/ui/button";
 import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { ModeToggle } from "./components/ui/mode-toggle";
-import { useTheme } from "./components/theme-provider";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+import { useTheme } from "@/components/theme-provider";
 import { ChevronDownIcon } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import Marquee from "react-fast-marquee";
 
 export default function App() {
   const { theme } = useTheme();
@@ -20,7 +25,7 @@ export default function App() {
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col sm:flex-row overflow-hidden">
       <div className="fixed z-20 sm:h-screen sm:w-20 w-screen flex flex-col sm:flex-row">
-        <div className="dark:bg-zinc-900 bg-zinc-300 p-4 sm:flex-col flex gap-4 sm:h-screen">
+        <div className="dark:bg-zinc-800 bg-zinc-300 p-4 sm:flex-col flex gap-4 sm:h-screen">
           <ModeToggle />
           <Button variant="secondary" asChild>
             <a href="https://discord.com/invite/7cFD4ca9">
@@ -145,49 +150,99 @@ export default function App() {
         </section>
         <section className="mx-8 my-8">
           <label>
-            <img
-              src={animeGirlImage}
-              className="w-full rounded-3xl border border-foreground"
-            ></img>
+            <div className="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground" />
             <p className="text-center text-muted-foreground">
               A real photograph of an Ethereum user in its natural habitat.
             </p>
           </label>
         </section>
-        <section className="mx-8 mb-48">
-          <div className="flex flex-col sm:flex-row gap-y-4 gap-x-8">
-            <div className="block max-w-xl space-y-4">
+        <section className="mx-8">
+          <div className="flex flex-col lg:flex-row gap-y-4 gap-x-8">
+            <div className="block lg:max-w-xl space-y-4 text-lg">
               <p className="font-semibold text-3xl">
                 Ethereum's big problem:{" "}
                 <span className="block underline underline-offset-4">
                   lack of marketing.
                 </span>
               </p>
-              <p className="text-lg">
+              <p>
                 There's an established community of researchers and developers
                 focused on building and scaling Ethereum, but there's no unified
                 community focused on promoting it.
               </p>
-              <p className="text-lg">
-                Ethereum doesn't have a marketing team but its competitors do.
-                The Ethereum Foundation take a hands off approach and the
-                community is often too humble.
+              <p>
+                The people whose voices matter strongly, core developers and
+                researchers, are often quiet. The empty space is filled with
+                competitor noise which is often intellectually dishonest.{" "}
+                <b>
+                  This shapes the world's view of Ethereum without anyone to
+                  credibly counteract it, until now.
+                </b>
+              </p>
+              <p>
+                The 2077 Collective will proactively shape the Ethereum
+                narrative to help advance its position as the backbone of web3
+                and amplify the voices of protocol devs and researchers.
               </p>
             </div>
 
-            <div className="">
-              <p className="font-black">SIDE EFFECTS</p>
+            <Separator className="my-4 lg:hidden" />
+            <div className="italic">
+              <p className="font-black">SYMPTOMS OF MARKETING DEFICIENCY</p>
+
               <ul className="text-lg text-transparent bg-gradient-to-b from-foreground to-foreground/40 bg-clip-text">
                 <li>Being perceived as old and useless technology.</li>
-                <li>Elite human capital hidden away on Farcaster.</li>
+                <li>Elite builders hidden away on Farcaster.</li>
                 <li>The narrative being controlled by Solana.</li>
                 <li>Alt-L1s spreading FUD about Ethereum daily.</li>
                 <li>Competing innovations stealing the spotlight.</li>
               </ul>
+              <p className="max-w-sm text-sm text-foreground/30 mt-4">
+                If you are feeling any of these symptoms, please go to the 2077
+                Collective immediately.
+              </p>
             </div>
           </div>
         </section>
-        <section>our team</section>
+        <Separator className="my-16" />
+        <section className="mx-8 mb-48">
+          <div className="flex flex-col md:flex-row gap-y-4 gap-x-8">
+            <div className="block max-w-3xl space-y-4 text-lg">
+              <p className="font-semibold text-3xl">
+                Marketing efforts are focusing on the wrong place
+              </p>
+              <p>
+                Too much community energy is spent in tribal arguments on CT or
+                talking to other crypto natives. Having circular arguments about
+                the investment case or esoteric technical debates is not useful
+                after a point.
+              </p>
+              <p>
+                For most people,{" "}
+                <b>
+                  energy is better spent showing the world what you can do with
+                  Ethereum right now and getting people on-chain.
+                </b>{" "}
+                This is what we'll be focusing on.
+              </p>
+            </div>
+          </div>
+        </section>
+        <footer className="pt-64">
+          <img
+            src={theme == "light" ? blackLogo : whiteLogo}
+            className="max-h-32 mx-auto mb-8 hidden sm:block"
+          />
+          <img
+            src={theme == "light" ? blackIconLogo : whiteIconLogo}
+            className="max-h-32 mx-auto mb-8 block sm:hidden"
+          />
+          <Marquee className="w-full font-mono select-none">
+            LET'S ONBOARD THE NEXT BILLION USERS|LET'S ONBOARD THE NEXT BILLION
+            USERS|LET'S ONBOARD THE NEXT BILLION USERS|LET'S ONBOARD THE NEXT
+            BILLION USERS|LET'S ONBOARD THE NEXT BILLION USERS|
+          </Marquee>
+        </footer>
       </div>
     </div>
   );
