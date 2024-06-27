@@ -152,7 +152,7 @@ export default function App() {
             <p>
               The 2077 Collective will proactively shape the Ethereum narrative
               to help advance its position as the backbone of web3 and amplify
-              the voices of protocol devs and researchers.
+              the voices of protocol devs, builders and researchers.
             </p>
           </div>
 
