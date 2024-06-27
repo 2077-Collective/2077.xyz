@@ -15,12 +15,14 @@ import { Button } from "@/components/ui/button";
 import {
   DiscordLogoIcon,
   ExternalLinkIcon,
+  ReaderIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import { useTheme } from "@/components/theme-provider";
 import { ChevronDownIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 export default function App() {
   const { theme } = useTheme();
@@ -57,7 +59,7 @@ export default function App() {
           <Button variant="secondary" asChild>
             <a href="https://discord.com/invite/7cFD4ca9" className="space-x-2">
               <DiscordLogoIcon className="w-6 h-6" />
-              <span>DISCORD SERVER</span>
+              <span>JOIN THE DISCORD</span>
             </a>
           </Button>
           <Button variant="secondary" asChild>
@@ -65,6 +67,12 @@ export default function App() {
               <TwitterLogoIcon className="w-6 h-6" />
               <span>FOLLOW US ON X</span>
             </a>
+          </Button>
+          <Button variant="secondary" asChild>
+            <Link to="/blog" className="space-x-2">
+              <ReaderIcon className="w-6 h-6" />
+              <span>READ THE BLOG</span>
+            </Link>
           </Button>
         </div>
         <div className="sm:hidden absolute bottom-0 left-0 right-0 mb-32">
