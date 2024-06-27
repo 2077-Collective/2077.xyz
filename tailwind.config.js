@@ -75,4 +75,6 @@ export const theme = {
     },
   },
 };
-export const plugins = [import("tailwindcss-animate")];
+import animate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
+export const plugins = [animate, typography];

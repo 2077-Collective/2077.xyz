@@ -6,9 +6,10 @@ import {
 import { motion, useScroll } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { ModeToggle } from "./components/ui/mode-toggle";
-import { Link, Outlet } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
+import { ReactNode } from "react";
 
-export default function Root() {
+export default function Root({ children }: { children: ReactNode }) {
   const { scrollYProgress } = useScroll();
 
   return (
@@ -16,12 +17,9 @@ export default function Root() {
       <div className="fixed z-20 sm:h-screen sm:w-20 w-screen flex flex-col sm:flex-row">
         <div className="dark:bg-zinc-900 bg-zinc-300 p-4 sm:flex-col flex gap-4 sm:h-screen">
           <ModeToggle className="sm:w-full" />
-          <Button variant="secondary" className="sm:w-full">
-            <HamburgerMenuIcon />
-          </Button>
 
           <Button variant="secondary" asChild>
-            <Link to="blog">Blog</Link>
+            <Link to="blog">BLOG</Link>
           </Button>
           <Button variant="secondary" asChild>
             <Link to="https://discord.com/invite/7cFD4ca9">
@@ -44,9 +42,24 @@ export default function Root() {
         />
       </div>
 
-      <div className="w-full mt-24 sm:mt-0 sm:ml-24">
-        <Outlet />
-      </div>
+      <div className="w-full mt-24 sm:mt-0 sm:ml-24">{children}</div>
     </div>
+  );
+}
+export function ErrorElement() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const error: any = useRouteError() as any;
+  console.error(error);
+
+  return (
+    <Root>
+      <div className="p-4">
+        <h2 className="font-bold text-3xl">{error.status}</h2>
+        <p className="mb-4">{error.data}</p>
+        <Button variant="secondary" asChild>
+          <Link to="/">Back to homepage</Link>
+        </Button>
+      </div>
+    </Root>
   );
 }

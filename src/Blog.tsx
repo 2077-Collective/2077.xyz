@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useRouteLoaderData } from "@remix-run/react";
+import { Link, useRouteLoaderData } from "@remix-run/react";
 import { Card, CardHeader } from "./components/ui/card";
 import {
   Breadcrumb,
@@ -8,16 +8,8 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import BlogData from "./BlogData";
 
-interface BlogData {
-  posts: {
-    slug: string;
-    file: string;
-    time: number;
-    author: string;
-    title: string;
-  }[];
-}
 export default function Blog() {
   const loaderData = useRouteLoaderData("blog") as BlogData;
 

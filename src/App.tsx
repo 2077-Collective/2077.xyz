@@ -10,7 +10,7 @@ import whiteLogo from "@/assets/2077-logo-text-white.svg";
 import blackLogo from "@/assets/2077-logo-text-black.svg";
 import whiteIconLogo from "@/assets/2077-logo-white.svg";
 import blackIconLogo from "@/assets/2077-logo-black.svg";
-import sponsors from "@/assets/sponsors.png";
+import sponsors from "@/assets/sponsors.svg";
 import { Button } from "@/components/ui/button";
 import {
   DiscordLogoIcon,
@@ -110,57 +110,11 @@ export default function App() {
       <section className="mx-8 mt-8 mb-8">
         <label>
           <h2 className="text-xl font-bold uppercase mb-2">Our sponsors</h2>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div>
             <img
               src={sponsors}
               className="max-w-screen-md border border-foreground"
             />
-            <div>
-              A huge thanks to our sponsors for making 2077 possible:
-              <ol className="list-disc list-inside">
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.spire.dev/">Spire Labs</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.eigenlayer.xyz/">EigenLayer</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.starknet.io/">StarkNet</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="http://megaeth.systems/">MegaETH</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.abcde.com/">ABCDE</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.metalex.tech/">MetaLeX</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://x.com/0xshake">Bo Du</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://x.com/jamesyoung">James Young</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.azuki.com">Azuki</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1 hover:text-green-400 underline">
-                  <a href="https://www.light.so">Light.so</a>
-                  <ExternalLinkIcon className="inline" />
-                </li>
-                <li className="space-x-1">Johannes</li>
-              </ol>
-            </div>
           </div>
         </label>
       </section>
@@ -293,9 +247,65 @@ export default function App() {
         <label>
           <div className="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground" />
           <p className="text-center text-muted-foreground">
-            A real photograph of an Ethereum user in their natural habitat.
+            A real unedited photograph of an ethernaut in their natural habitat.
           </p>
         </label>
+      </section>
+      <section className="w-full flex flex-row justify-center">
+        <div className="">
+          <p className="text-xl">
+            A huge thanks to our sponsors for making 2077 possible:
+          </p>
+          <div className="flex flex-row gap-4">
+            <ol className="list-disc list-inside">
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.spire.dev/">Spire Labs</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.eigenlayer.xyz/">EigenLayer</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.starknet.io/">StarkNet</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="http://megaeth.systems/">MegaETH</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+            </ol>
+            <ol className="list-disc list-inside">
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.abcde.com/">ABCDE</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.metalex.tech/">MetaLeX</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://x.com/0xshake">Bo Du</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://x.com/jamesyoung">James Young</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+            </ol>
+            <ol className="list-disc list-inside">
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.azuki.com">Azuki</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://www.light.so">Light.so</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1">Johannes</li>
+            </ol>
+          </div>
+        </div>
       </section>
       <footer className="pt-64">
         <img
