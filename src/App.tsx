@@ -122,7 +122,7 @@ export default function App() {
         <label>
           <div className="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground" />
           <p className="text-center text-muted-foreground">
-            A real photograph of an Ethereum user in its natural habitat.
+            A real photograph of an Ethereum user in their natural habitat.
           </p>
         </label>
       </section>
