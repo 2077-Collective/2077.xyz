@@ -1,4 +1,4 @@
-import { Link, useRouteLoaderData } from "@remix-run/react";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import { Card, CardHeader } from "./components/ui/card";
 import {
   Breadcrumb,
