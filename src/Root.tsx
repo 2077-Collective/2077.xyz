@@ -1,8 +1,4 @@
-import {
-  DiscordLogoIcon,
-  HamburgerMenuIcon,
-  TwitterLogoIcon,
-} from "@radix-ui/react-icons";
+import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { motion, useScroll } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { ModeToggle } from "./components/ui/mode-toggle";

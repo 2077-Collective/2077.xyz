@@ -19,7 +19,6 @@ import {
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import { useTheme } from "@/components/theme-provider";
-import { ChevronDownIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
