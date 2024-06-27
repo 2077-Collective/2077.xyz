@@ -141,12 +141,12 @@ export default function App() {
               community focused on promoting it.
             </p>
             <p>
-              The people whose voices matter strongly, core developers and
-              researchers, are often quiet. The empty space is filled with
+              The people whose voices matter—core developers, researchers,
+              builders—are often quiet. The empty space is filled with
               competitor noise which is often intellectually dishonest.{" "}
               <b>
                 This shapes the world's view of Ethereum without anyone to
-                credibly counteract it, until now.
+                credibly counteract it—until now.
               </b>
             </p>
             <p>
