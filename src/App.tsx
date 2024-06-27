@@ -114,8 +114,8 @@ export default function App() {
         </p>
         <p>
           <b>Our mission</b> is to accelerate Ethereum adoption, because for
-          this vision to materialise, crypto must be built on a truly
-          decentralised and permissionless base layer.
+          this vision to materialize, crypto must be built on a truly
+          decentralized and permissionless base layer.
         </p>
       </section>
       <section className="mx-8 my-8">
