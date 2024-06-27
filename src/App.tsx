@@ -163,10 +163,11 @@ export default function App() {
             <ul className="text-lg text-transparent bg-gradient-to-b from-foreground to-foreground/40 bg-clip-text">
               <li>Being perceived as old and useless technology.</li>
               <li>Elite builders not getting enough attention.</li>
+              <li>The crypto narrative controlled by alt-L1s.</li>
               <li>
-                The narrative being controlled by anti-Ethereum psyops experts.
+                Influencers waging information warfare and spreading FUD about
+                Ethereum daily.
               </li>
-              <li>Alt-L1s spreading FUD about Ethereum daily.</li>
               <li>Competing innovations stealing the spotlight.</li>
             </ul>
             <p className="max-w-sm text-sm text-foreground/30 mt-4">
