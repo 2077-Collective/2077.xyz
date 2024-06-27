@@ -1,4 +1,4 @@
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import ethLogoCircle from "@/assets/eth-logo-circle.svg";
 import innerCircle from "@/assets/inner-circle.svg";
 import midCircle from "@/assets/mid-circle.svg";
@@ -12,7 +12,6 @@ import whiteIconLogo from "@/assets/2077-logo-white.svg";
 import blackIconLogo from "@/assets/2077-logo-black.svg";
 import { Button } from "@/components/ui/button";
 import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { useTheme } from "@/components/theme-provider";
 import { ChevronDownIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -20,7 +19,6 @@ import Marquee from "react-fast-marquee";
 
 export default function App() {
   const { theme } = useTheme();
-  const { scrollYProgress } = useScroll();
 
   return (
     <>
