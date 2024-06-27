@@ -1,4 +1,8 @@
-import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import {
+  DiscordLogoIcon,
+  HamburgerMenuIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 import { motion, useScroll } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { ModeToggle } from "./components/ui/mode-toggle";
@@ -11,19 +15,23 @@ export default function Root() {
     <div className="bg-background text-foreground min-h-screen flex flex-col sm:flex-row overflow-hidden">
       <div className="fixed z-20 sm:h-screen sm:w-20 w-screen flex flex-col sm:flex-row">
         <div className="dark:bg-zinc-900 bg-zinc-300 p-4 sm:flex-col flex gap-4 sm:h-screen">
-          <ModeToggle />
+          <ModeToggle className="sm:w-full" />
+          <Button variant="secondary" className="sm:w-full">
+            <HamburgerMenuIcon />
+          </Button>
+
           <Button variant="secondary" asChild>
-            <a href="https://discord.com/invite/7cFD4ca9">
+            <Link to="blog">Blog</Link>
+          </Button>
+          <Button variant="secondary" asChild>
+            <Link to="https://discord.com/invite/7cFD4ca9">
               <DiscordLogoIcon className="w-6 h-6" />
-            </a>
+            </Link>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="https://x.com/2077Collective">
+            <Link to="https://x.com/2077Collective">
               <TwitterLogoIcon className="w-6 h-6" />
-            </a>
-          </Button>
-          <Button variant="secondary" asChild>
-            <Link to="https://x.com/2077Collective">Blog</Link>
+            </Link>
           </Button>
         </div>
         <motion.div

@@ -10,8 +10,13 @@ import whiteLogo from "@/assets/2077-logo-text-white.svg";
 import blackLogo from "@/assets/2077-logo-text-black.svg";
 import whiteIconLogo from "@/assets/2077-logo-white.svg";
 import blackIconLogo from "@/assets/2077-logo-black.svg";
+import sponsors from "@/assets/sponsors.png";
 import { Button } from "@/components/ui/button";
-import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import {
+  DiscordLogoIcon,
+  ExternalLinkIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 import { useTheme } from "@/components/theme-provider";
 import { ChevronDownIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -22,7 +27,7 @@ export default function App() {
 
   return (
     <>
-      <header className="p-8 relative w-full pb-64 max-sm:h-screen">
+      <header className="p-8 relative w-full pb-80 max-sm:h-screen">
         <h1 className="text-3xl">We are the 2077 Collective.</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/40 text-xl">
           <h1>Nosotros somos el Colectivo 2077.</h1>
@@ -102,7 +107,64 @@ export default function App() {
           />
         </div>
       </header>
-      <section className="mx-8 mt-16 mb-48 text-2xl max-w-screen-lg space-y-4">
+      <section className="mx-8 mt-8 mb-8">
+        <label>
+          <h2 className="text-xl font-bold uppercase mb-2">Our sponsors</h2>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <img
+              src={sponsors}
+              className="max-w-screen-md border border-foreground"
+            />
+            <div>
+              A huge thanks to our sponsors for making 2077 possible:
+              <ol className="list-disc list-inside">
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.spire.dev/">Spire Labs</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.eigenlayer.xyz/">EigenLayer</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.starknet.io/">StarkNet</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="http://megaeth.systems/">MegaETH</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.abcde.com/">ABCDE</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.metalex.tech/">MetaLeX</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://x.com/0xshake">Bo Du</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://x.com/jamesyoung">James Young</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.azuki.com">Azuki</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1 hover:text-green-400 underline">
+                  <a href="https://www.light.so">Light.so</a>
+                  <ExternalLinkIcon className="inline" />
+                </li>
+                <li className="space-x-1">Johannes</li>
+              </ol>
+            </div>
+          </div>
+        </label>
+      </section>
+      <section className="mx-8 mb-48 text-2xl max-w-screen-lg space-y-4">
         <p>
           <b>We believe</b> that crypto has the potential to give people across
           the world almost unimaginable levels of freedom and autonomy.
@@ -118,41 +180,49 @@ export default function App() {
           decentralized and permissionless base layer.
         </p>
       </section>
-      <section className="mx-8 my-8">
-        <label>
-          <div className="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground" />
-          <p className="text-center text-muted-foreground">
-            A real photograph of an Ethereum user in their natural habitat.
-          </p>
-        </label>
-      </section>
       <section className="mx-8">
         <div className="flex flex-col lg:flex-row gap-y-4 gap-x-8">
           <div className="block lg:max-w-xl space-y-4 text-lg">
-            <p className="font-semibold text-3xl">
-              Ethereum's big problem:{" "}
+            <p className="font-semibold text-4xl">
+              Ethereum's big problem:
               <span className="block underline underline-offset-4">
-                lack of marketing.
+                Lack of marketing
               </span>
+            </p>
+            <p className="font-semibold text-3xl">
+              Ethereum marketing department?{" "}
+              <span className="line-through">ERC</span> Error 404
             </p>
             <p>
               There's an established community of researchers and developers
-              focused on building and scaling Ethereum, but there's no unified
-              community focused on promoting it.
+              focused on building and scaling Ethereum,{" "}
+              <b>but there's no unified community focused on promoting it.</b>{" "}
+              Independent marketing projects at the L2 or dapp/infrastructure
+              layer—while net positive and beneficial for Ethereum—tend to be
+              self-interested and ultimately focused on one specific (albeit
+              important) piece of the puzzle they have an interest in.
+            </p>
+            <p className="font-semibold text-3xl">
+              A (visible) narrative vacuum
             </p>
             <p>
-              The people whose voices matter—core developers, researchers,
-              builders—are often quiet. The empty space is filled with
-              competitor noise which is often intellectually dishonest.{" "}
+              The people whose voices really matter—core developers,
+              researchers, builders—are often quiet. The empty space is filled
+              with competitor noise, which is often intellectually dishonest.
+              This shapes the world's view of Ethereum without anyone to
+              credibly counteract the psyops, dispel misinformation, and
+              proactively share good narratives about Ethereum with the world.
+            </p>
+            <p className="font-semibold text-3xl">Focus on the wrong things</p>
+            <p>
+              Too much of the Ethereum community's energy is spent in tribal
+              arguments on crypto-Twitter, or talking to other crypto natives.
+              Having circular arguments about the investment case or esoteric
+              technical debates is not useful after a point. For most people,
               <b>
-                This shapes the world's view of Ethereum without anyone to
-                credibly counteract it—until now.
+                energy is better spent showing the world what users can do with
+                Ethereum <i>right now</i> and getting people on-chain.
               </b>
-            </p>
-            <p>
-              The 2077 Collective will proactively shape the Ethereum narrative
-              to help advance its position as the backbone of web3 and amplify
-              the voices of protocol devs, builders and researchers.
             </p>
           </div>
 
@@ -164,10 +234,7 @@ export default function App() {
               <li>Being perceived as old and useless technology.</li>
               <li>Elite builders not getting enough attention.</li>
               <li>The crypto narrative controlled by alt-L1s.</li>
-              <li>
-                Influencers waging information warfare and spreading FUD about
-                Ethereum daily.
-              </li>
+              <li>Influencers waging information warfare and spreading FUD.</li>
               <li>Competing innovations stealing the spotlight.</li>
             </ul>
             <p className="max-w-sm text-sm text-foreground/30 mt-4">
@@ -178,28 +245,57 @@ export default function App() {
         </div>
       </section>
       <Separator className="my-16" />
-      <section className="mx-8 mb-48">
-        <div className="flex flex-col md:flex-row gap-y-4 gap-x-8">
-          <div className="block max-w-3xl space-y-4 text-lg">
-            <p className="font-semibold text-3xl">
-              Marketing efforts are focusing on the wrong place
-            </p>
-            <p>
-              Too much community energy is spent in tribal arguments on CT or
-              talking to other crypto natives. Having circular arguments about
-              the investment case or esoteric technical debates is not useful
-              after a point.
-            </p>
-            <p>
-              For most people,{" "}
-              <b>
-                energy is better spent showing the world what you can do with
-                Ethereum right now and getting people on-chain.
-              </b>{" "}
-              This is what we'll be focusing on.
-            </p>
-          </div>
-        </div>
+
+      <section className="mx-8 my-8">
+        <h1 className="text-4xl mb-4">
+          How are we solving Ethereum's marketing problem?
+        </h1>
+        <p className="mb-4 text-xl">
+          The 2077 Collective has authored EIP-2077: Ethereum Marketing
+          Department to prescribe a strategy for marketing the Ethereum brand
+          online and IRL. EIP-2077 provides a blueprint that guides 2077
+          Collective's marketing efforts:
+        </p>
+        <ol className="space-y-2 font-mono max-w-screen-sm">
+          <li className="flex">
+            <div className="px-2 py-1 text-xl bg-red-500 border border-foreground h-min mr-2">
+              1
+            </div>
+            Establish consensus on core marketing problems, create public good
+            infrastructure, and forge relationships between builders and
+            marketers.
+          </li>
+          <li className="flex">
+            <div className="px-2 py-1 text-xl bg-yellow-500 border border-foreground h-min mr-2">
+              2
+            </div>
+            Ethpill newcomers, defend Ethereum from FUD + psyops, and amplify
+            the voices of protocol devs, researchers, and builders.
+          </li>
+          <li className="flex">
+            <div className="px-2 py-1 text-xl bg-green-500 border border-foreground h-min mr-2">
+              3
+            </div>
+            Bring more people on-chain, increase % of builders on-chain, and
+            creating resources to onboard users.
+          </li>
+          <li className="flex">
+            <div className="px-2 py-1 text-xl bg-blue-500 border border-foreground h-min mr-2">
+              4
+            </div>
+            Promote Ethereum brand and projects in the ecosystem, educating
+            users about Ethereum.
+          </li>
+        </ol>
+      </section>
+
+      <section className="mx-8 my-8">
+        <label>
+          <div className="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground" />
+          <p className="text-center text-muted-foreground">
+            A real photograph of an Ethereum user in their natural habitat.
+          </p>
+        </label>
       </section>
       <footer className="pt-64">
         <img
