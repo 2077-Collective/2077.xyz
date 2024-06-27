@@ -75,9 +75,6 @@ export default function App() {
             </Link>
           </Button>
         </div>
-        <div className="sm:hidden absolute bottom-0 left-0 right-0 mb-32">
-          <ChevronDownIcon className="mx-auto w-8 h-8" />
-        </div>
         <div className="hidden sm:block select-none">
           <img
             className=" w-1/2 absolute top-0 right-0 -mr-48 lg:-mr-64"
@@ -121,7 +118,7 @@ export default function App() {
           <div>
             <img
               src={sponsors}
-              className="max-w-screen-md border border-foreground"
+              className="max-w-screen-md w-full border border-foreground"
             />
           </div>
         </label>
@@ -260,7 +257,7 @@ export default function App() {
         </label>
       </section>
       <section className="w-full flex flex-row justify-center">
-        <div className="">
+        <div className="p-4">
           <p className="text-xl">
             A huge thanks to our sponsors for making 2077 possible:
           </p>
