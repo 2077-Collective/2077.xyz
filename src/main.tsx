@@ -1,15 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import Blog from "./Blog.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@fontsource-variable/manrope";
 import { ThemeProvider } from "@/components/theme-provider";
+import Root from "./Root.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
+    children: [
+      {
+        index: true,
+        element: <App />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+    ],
   },
 ]);
 
