@@ -209,31 +209,43 @@ export default function App() {
             <div className="px-2 py-1 text-xl bg-red-500 border border-foreground h-min mr-2">
               1
             </div>
-            Establish consensus on core marketing problems, create public good
-            infrastructure to tackle marketing problems, and forge relationships
-            between builders and marketers.
+            <span>
+              <b>Fill the gap:</b> Establish consensus on core marketing
+              problems, create public good infrastructure to tackle marketing
+              problems, and forge relationships between builders and marketers.
+            </span>
           </li>
           <li className="flex">
             <div className="px-2 py-1 text-xl bg-yellow-500 border border-foreground h-min mr-2">
               2
             </div>
-            Ethpill newcomers, defend Ethereum from FUD + psyops, and amplify
-            the voices of protocol devs, researchers, and builders.
+
+            <span>
+              <b>Control the narrative:</b> Ethpill newcomers, defend Ethereum
+              from FUD + psyops, and amplify the voices of protocol devs,
+              researchers, and builders.
+            </span>
           </li>
           <li className="flex">
             <div className="px-2 py-1 text-xl bg-green-500 border border-foreground h-min mr-2">
               3
             </div>
-            Bring more people on-chain, increase % of builders in the Ethereum
-            ecosystem, and create tools + resources to onboard users/devs.
+            <span>
+              <b>Correct the focus:</b> Bring more people on-chain, increase %
+              of builders in the Ethereum ecosystem, and create tools +
+              resources to onboard users/devs.
+            </span>
           </li>
           <li className="flex">
             <div className="px-2 py-1 text-xl bg-blue-500 border border-foreground h-min mr-2">
               4
             </div>
-            Increase mindshare, adoption, and investment in Ethereum through
-            coordinated marketing efforts in the ecosystem and educate users,
-            builders, and businesses about Ethereum L1/L2s.
+            <span>
+              <b>Promote the ecosystem:</b> Increase mindshare, adoption, and
+              investment in Ethereum through coordinated marketing efforts in
+              the ecosystem and educate users, builders, and businesses about
+              Ethereum L1/L2s.
+            </span>
           </li>
         </ol>
       </section>
