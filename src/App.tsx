@@ -48,7 +48,7 @@ export default function App() {
           <span className="bg-orange-600 px-1 inline-block">developers</span>{" "}
           all working to make Ethereum cool again.
         </p>
-        <div className="mt-4 space-x-2 text-lg font-mono select-none">
+        <div className="mt-4 gap-2 flex flex-col sm:flex-row text-lg font-mono select-none">
           <Button variant="secondary" asChild>
             <a href="https://discord.com/invite/7cFD4ca9" className="space-x-2">
               <DiscordLogoIcon className="w-6 h-6" />
