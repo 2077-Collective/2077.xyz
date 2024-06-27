@@ -30,7 +30,7 @@ export default function App() {
     <>
       <header className="p-8 relative w-full pb-80 max-sm:h-screen">
         <h1 className="text-3xl">We are the 2077 Collective.</h1>
-        <div className="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/40 text-xl">
+        <div className="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/60 text-xl">
           <h1>Nosotros somos el Colectivo 2077.</h1>
           <h1> Wir sind das 2077 Kollektiv.</h1>
           <h1>我们是 2077 集体。</h1>
@@ -111,17 +111,6 @@ export default function App() {
           />
         </div>
       </header>
-      <section className="mx-8 mt-8 mb-8">
-        <label>
-          <h2 className="text-xl font-bold uppercase mb-2">Our sponsors</h2>
-          <div>
-            <img
-              src={sponsors}
-              className="max-w-screen-md w-full border border-foreground"
-            />
-          </div>
-        </label>
-      </section>
       <section className="mx-8 mb-48 text-2xl max-w-screen-lg space-y-4">
         <p>
           <b>We believe</b> that crypto has the potential to give people across
@@ -188,14 +177,14 @@ export default function App() {
           <div className="italic">
             <p className="font-black">SYMPTOMS OF MARKETING DEFICIENCY</p>
 
-            <ul className="text-lg text-transparent bg-gradient-to-b from-foreground to-foreground/40 bg-clip-text">
+            <ul className="text-lg text-transparent bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text">
               <li>Being perceived as old and useless technology.</li>
               <li>Elite builders not getting enough attention.</li>
               <li>The crypto narrative controlled by alt-L1s.</li>
               <li>Influencers waging information warfare and spreading FUD.</li>
               <li>Competing innovations stealing the spotlight.</li>
             </ul>
-            <p className="max-w-sm text-sm text-foreground/30 mt-4">
+            <p className="max-w-sm text-sm text-foreground/50 mt-4">
               If you are feeling any of these symptoms, please go to the 2077
               Collective immediately.
             </p>
@@ -206,7 +195,8 @@ export default function App() {
 
       <section className="mx-8 my-8">
         <h1 className="text-4xl mb-4">
-          How are we solving Ethereum's marketing problem?
+          We are Ethernauts making Ethereum cool again and solving ETH's
+          marketing problem.
         </h1>
         <p className="mb-4 text-xl">
           The 2077 Collective has authored EIP-2077: Ethereum Marketing
@@ -220,8 +210,8 @@ export default function App() {
               1
             </div>
             Establish consensus on core marketing problems, create public good
-            infrastructure, and forge relationships between builders and
-            marketers.
+            infrastructure to tackle marketing problems, and forge relationships
+            between builders and marketers.
           </li>
           <li className="flex">
             <div className="px-2 py-1 text-xl bg-yellow-500 border border-foreground h-min mr-2">
@@ -234,15 +224,16 @@ export default function App() {
             <div className="px-2 py-1 text-xl bg-green-500 border border-foreground h-min mr-2">
               3
             </div>
-            Bring more people on-chain, increase % of builders on-chain, and
-            creating resources to onboard users.
+            Bring more people on-chain, increase % of builders in the Ethereum
+            ecosystem, and create tools + resources to onboard users/devs.
           </li>
           <li className="flex">
             <div className="px-2 py-1 text-xl bg-blue-500 border border-foreground h-min mr-2">
               4
             </div>
-            Promote Ethereum brand and projects in the ecosystem, educating
-            users about Ethereum.
+            Increase mindshare, adoption, and investment in Ethereum through
+            coordinated marketing efforts in the ecosystem and educate users,
+            builders, and businesses about Ethereum L1/L2s.
           </li>
         </ol>
       </section>
@@ -251,14 +242,21 @@ export default function App() {
         <label>
           <div className="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground" />
           <p className="text-center text-muted-foreground">
-            A real unedited photograph of an ethernaut in their natural habitat.
+            A real unedited photograph of an Ethernaut in their natural habitat.
           </p>
         </label>
+      </section>
+
+      <section className="mx-8 mt-8 mb-8">
+        <img
+          src={sponsors}
+          className="max-w-screen-md w-full mx-auto border border-foreground"
+        />
       </section>
       <section className="w-full flex flex-row justify-center">
         <div className="p-4">
           <p className="text-xl">
-            A huge thanks to our sponsors for making 2077 possible:
+            A huge thanks to our supporters for making 2077 possible:
           </p>
           <div className="flex flex-row gap-4">
             <ol className="list-disc list-inside">
