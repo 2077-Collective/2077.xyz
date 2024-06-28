@@ -5,5 +5,7 @@ export default interface BlogData {
     time: number;
     author: string;
     title: string;
+    tags: string[];
   }[];
+  tags: string[];
 }

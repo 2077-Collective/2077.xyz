@@ -8,10 +8,22 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Separator } from "./components/ui/separator";
 import BlogData from "./BlogData";
+import { badgeVariants } from "./components/ui/badge";
 
 export default function Blog() {
   const loaderData = useRouteLoaderData("blog") as BlogData;
+
+  const tags = loaderData?.tags.map((v) => (
+    <Link
+      to={"/blog/tags/" + v}
+      key={v}
+      className={badgeVariants({ variant: "outline" })}
+    >
+      {v}
+    </Link>
+  ));
 
   const posts = loaderData?.posts
     ?.sort(({ time: t1 }, { time: t2 }) => {
@@ -54,7 +66,12 @@ export default function Blog() {
         </BreadcrumbList>
       </Breadcrumb>
       <h1 className="text-4xl font-semibold py-4">Blog</h1>
-      <ul className="flex flex-col gap-4">{posts}</ul>
+      <div className="mb-4">
+        <h2 className="text-2xl font-semibold py-2">Tags</h2>
+        {tags}
+      </div>
+      <Separator />
+      <ul className="mt-4 flex flex-col gap-4">{posts}</ul>
     </div>
   );
 }

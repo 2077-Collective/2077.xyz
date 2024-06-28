@@ -1,22 +1,28 @@
-import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { motion, useScroll } from "framer-motion";
+import {
+  DiscordLogoIcon,
+  HamburgerMenuIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
+import { motion, useCycle, useScroll } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { ModeToggle } from "./components/ui/mode-toggle";
 import { Link, useRouteError } from "react-router-dom";
 import { ReactNode } from "react";
+import NavMenu from "./components/menu";
 
 export default function Root({ children }: { children: ReactNode }) {
   const { scrollYProgress } = useScroll();
+  const [open, cycleOpen] = useCycle(false, true, false);
 
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col sm:flex-row overflow-hidden">
       <div className="fixed z-20 sm:h-screen sm:w-20 w-screen flex flex-col sm:flex-row">
         <div className="dark:bg-zinc-900 bg-zinc-300 p-4 sm:flex-col flex gap-4 sm:h-screen">
+          <Button variant="outline" onClick={() => cycleOpen()}>
+            <HamburgerMenuIcon className="w-6 h-6" />
+            {open}
+          </Button>{" "}
           <ModeToggle className="sm:w-full" />
-
-          <Button variant="secondary" asChild>
-            <Link to="blog">BLOG</Link>
-          </Button>
           <Button variant="secondary" asChild>
             <Link to="https://discord.com/invite/7cFD4ca9">
               <DiscordLogoIcon className="w-6 h-6" />
@@ -36,6 +42,7 @@ export default function Root({ children }: { children: ReactNode }) {
           className="bg-green-500 h-1 w-screen origin-left sm:hidden block"
           style={{ scaleX: scrollYProgress }}
         />
+        <NavMenu open={open} />
       </div>
 
       <div className="w-full mt-24 sm:mt-0 sm:ml-24">{children}</div>

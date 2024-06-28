@@ -12,6 +12,7 @@ import whiteIconLogo from "@/assets/2077-logo-white.svg";
 import blackIconLogo from "@/assets/2077-logo-black.svg";
 import sponsors from "@/assets/sponsors.svg";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import {
   DiscordLogoIcon,
   ExternalLinkIcon,
@@ -19,7 +20,6 @@ import {
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import { useTheme } from "@/components/theme-provider";
-import { Separator } from "@/components/ui/separator";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 

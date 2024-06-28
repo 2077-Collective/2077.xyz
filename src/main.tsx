@@ -7,7 +7,9 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "@fontsource-variable/manrope";
 import { ThemeProvider } from "@/components/theme-provider.tsx";
 import Root, { ErrorElement } from "./Root.tsx";
-import BlogPost from "./BlogPost.tsx";
+import BlogPost from "./BlogPostDisplay.tsx";
+import { NextUIProvider } from "@nextui-org/react";
+import TagPosts from "./Tag.tsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
         },
         children: [
           { index: true, element: <Blog /> },
+          {
+            path: "tags/:tag",
+            element: <TagPosts />,
+          },
           {
             path: ":slug",
             element: <BlogPost />,
@@ -74,7 +80,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <RouterProvider router={router} />
+      <NextUIProvider>
+        <RouterProvider router={router} />
+      </NextUIProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

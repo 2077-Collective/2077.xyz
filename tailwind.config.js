@@ -5,6 +5,7 @@ export const content = [
   "./components/**/*.{ts,tsx}",
   "./app/**/*.{ts,tsx}",
   "./src/**/*.{ts,tsx}",
+  "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 ];
 export const prefix = "";
 export const theme = {
@@ -77,4 +78,5 @@ export const theme = {
 };
 import animate from "tailwindcss-animate";
 import typography from "@tailwindcss/typography";
-export const plugins = [animate, typography];
+import { nextui } from "@nextui-org/react";
+export const plugins = [animate, typography, nextui];
