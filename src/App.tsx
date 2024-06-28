@@ -317,6 +317,18 @@ export default function App() {
                 <ExternalLinkIcon className="inline" />
               </li>
               <li className="space-x-1">Johannes</li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://fuel.network">Fuel Labs</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://x.com/DeFiDave22">DeFi Dave</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://x.com/shunkakinoki">Shun Kakinoki</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
             </ol>
           </div>
         </div>
