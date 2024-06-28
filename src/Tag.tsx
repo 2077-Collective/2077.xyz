@@ -1,5 +1,4 @@
 import { Link, useParams, useRouteLoaderData } from "react-router-dom";
-import { Card, CardHeader } from "./components/ui/card";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,6 +10,7 @@ import {
 import { Separator } from "./components/ui/separator";
 import BlogData from "./BlogData";
 import { badgeVariants } from "./components/ui/badge";
+import BlogCard from "./BlogCard";
 
 export default function TagPosts() {
   const loaderData = useRouteLoaderData("blog") as BlogData;
@@ -35,20 +35,13 @@ export default function TagPosts() {
         .map((value) => {
           return (
             <li key={value.slug}>
-              <Card>
-                <Link to={value.slug}>
-                  <CardHeader>
-                    <h2 className="text-xl">{value.title}</h2>
-                    <p className="text-sm">
-                      <b>By {value.author}</b>
-
-                      <span className="ml-4">
-                        {new Date(value.time).toLocaleString()}
-                      </span>
-                    </p>
-                  </CardHeader>
-                </Link>
-              </Card>
+              <BlogCard
+                name={value.title}
+                time={value.time}
+                author={value.author}
+                tags={value.tags}
+                slug={value.slug}
+              />
             </li>
           );
         })

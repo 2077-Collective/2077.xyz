@@ -12,7 +12,7 @@ export default function BlogCard({
   name: string;
   author: string;
   slug: string;
-  time: string;
+  time: number;
   tags: string[];
 }) {
   const t = tags.map((v: string) => (
