@@ -44,6 +44,8 @@ export default function NavMenu({ open }: { open: boolean }) {
             {depth == 0 && (
               <>
                 <Link to="/">Home</Link>
+                <Link to="/about">About us</Link>
+                <Link to="/values">Values</Link>
                 <Link to="/blog">Blog</Link>
                 <button
                   className="text-left flex flex-row items-center gap-2"

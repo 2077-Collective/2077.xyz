@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Card, CardHeader, CardFooter } from "./components/ui/card";
-import { badgeVariants } from "./components/ui/badge";
+import { Card, CardHeader, CardFooter } from "./ui/card";
+import { badgeVariants } from "./ui/badge";
 
 export default function BlogCard({
   name,

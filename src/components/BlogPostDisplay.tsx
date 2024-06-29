@@ -2,7 +2,7 @@ import { useLoaderData, useRouteLoaderData } from "react-router";
 import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
-import BlogData from "./BlogData";
+import BlogData from "../pages/BlogData";
 
 export default function BlogPost() {
   // i'm gonna use it later

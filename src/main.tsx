@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import Blog from "./Blog.tsx";
+import App from "./pages/App.tsx";
+import Blog from "./pages/Blog.tsx";
 import "./index.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "@fontsource-variable/manrope";
 import { ThemeProvider } from "@/components/theme-provider.tsx";
 import Root, { ErrorElement } from "./Root.tsx";
-import BlogPost from "./BlogPostDisplay.tsx";
+import BlogPost from "./components/BlogPostDisplay.tsx";
 import { NextUIProvider } from "@nextui-org/react";
 import TagPosts from "./Tag.tsx";
+import About from "./pages/About.tsx";
+import Values from "./pages/Values.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <App />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/values",
+        element: <Values />,
       },
       {
         path: "/blog",
