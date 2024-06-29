@@ -343,9 +343,9 @@ export default function App() {
           className="max-h-32 mx-auto mb-8 block sm:hidden"
         />
         <Marquee className="w-full font-mono select-none">
-          LET'S ONBOARD THE NEXT BILLION USERS|LET'S ONBOARD THE NEXT BILLION
-          USERS|LET'S ONBOARD THE NEXT BILLION USERS|LET'S ONBOARD THE NEXT
-          BILLION USERS|LET'S ONBOARD THE NEXT BILLION USERS|
+          MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL
+          AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM
+          COOL AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL AGAIN
         </Marquee>
       </footer>
     </div>
