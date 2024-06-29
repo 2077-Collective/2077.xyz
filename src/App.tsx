@@ -321,6 +321,8 @@ export default function App() {
                 <a href="https://fuel.network">Fuel Labs</a>
                 <ExternalLinkIcon className="inline" />
               </li>
+            </ol>
+            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://x.com/DeFiDave22">DeFi Dave</a>
                 <ExternalLinkIcon className="inline" />
