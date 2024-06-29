@@ -50,6 +50,16 @@ export default function About() {
           create in ways that add value to the Ethereum ecosystem.{" "}
         </p>
       </div>
+      <div>
+        <h2 className="text-3xl font-semibold mb-2">What are our values?</h2>
+        <p className="text-xl">
+          Check out the{" "}
+          <Link to="/values" className="underline">
+            values page
+          </Link>{" "}
+          for a list of the values the 2077 Collective stands for.
+        </p>
+      </div>
     </div>
   );
 }
