@@ -64,7 +64,7 @@ export default function NavMenu({ open }: { open: boolean }) {
                   Back <ArrowLeftIcon />
                 </button>
                 <Link to="https://eip2077.info">EIP-2077</Link>
-                <Link to="https://eip.wiki">EIP Wiki</Link>
+                <Link to="https://eips.wiki">EIP Wiki</Link>
                 <Link to="https://etherpedia.2077.xyz">Etherpedia</Link>
               </>
             )}
