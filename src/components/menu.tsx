@@ -3,7 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon, ArrowLeftIcon } from "@radix-ui/react-icons";
 
-export default function NavMenu({ open }: { open: boolean }) {
+export default function NavMenu({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (arg0: boolean) => void;
+}) {
   const [depth, setDepth] = useState(0);
 
   const sideVariants = {
@@ -43,10 +49,18 @@ export default function NavMenu({ open }: { open: boolean }) {
           >
             {depth == 0 && (
               <>
-                <Link to="/">Home</Link>
-                <Link to="/about">About us</Link>
-                <Link to="/values">Values</Link>
-                <Link to="/blog">Blog</Link>
+                <Link onClick={() => setOpen(false)} to="/">
+                  Home
+                </Link>
+                <Link onClick={() => setOpen(false)} to="/about">
+                  About us
+                </Link>
+                <Link onClick={() => setOpen(false)} to="/values">
+                  Values
+                </Link>
+                <Link onClick={() => setOpen(false)} to="/blog">
+                  Blog
+                </Link>
                 <button
                   className="text-left flex flex-row items-center gap-2"
                   onClick={() => setDepth(1)}

@@ -27,7 +27,7 @@ export default function App() {
   const { theme } = useTheme();
 
   return (
-    <div className="max-w-screen-xl">
+    <div className="max-w-screen-xl mx-auto">
       <header className="p-8 relative w-full pb-80 max-sm:h-screen">
         <h1 className="text-3xl">We are the 2077 Collective.</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/60 text-xl">
