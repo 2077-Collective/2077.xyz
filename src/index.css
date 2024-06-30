@@ -78,3 +78,7 @@
 .bg-anime-girl {
   background-image: url("@/assets/anime-girl.png");
 }
+
+a {
+  @apply underline-offset-4 hover:text-green-500;
+}

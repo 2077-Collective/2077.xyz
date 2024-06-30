@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
     <div className="mx-auto max-w-screen-xl">
-      <div className="max-w-screen-lg p-8 flex flex-col gap-4">
+      <div className="max-w-screen-lg p-8 flex flex-col gap-8">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -60,6 +60,17 @@ export default function About() {
               values page
             </Link>{" "}
             for a list of the values the 2077 Collective stands for.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-semibold mb-2">
+            I'm sold. How do I get involved?
+          </h2>
+          <p className="text-xl">
+            <a href="https://discord.com/invite/7cFD4ca9" className="underline">
+              Join our Discord server
+            </a>{" "}
+            and contribute!
           </p>
         </div>
       </div>
