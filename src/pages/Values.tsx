@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function Values() {
   return (
     <div className="max-w-screen-xl mx-auto">
-      <div className="max-w-screen-lg p-8 flex flex-col gap-4">
+      <div className="max-w-screen-lg p-8 flex flex-col gap-8">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
