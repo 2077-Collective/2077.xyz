@@ -44,7 +44,7 @@ export default function Blog() {
     });
 
   return (
-    <div className="p-8">
+    <div className="p-8 max-w-screen-xl mx-auto">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>

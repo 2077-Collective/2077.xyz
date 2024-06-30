@@ -12,6 +12,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import TagPosts from "./pages/Tag.tsx";
 import About from "./pages/About.tsx";
 import Values from "./pages/Values.tsx";
+import Support from "./pages/Support.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/values",
         element: <Values />,
+      },
+      {
+        path: "/support",
+        element: <Support />,
       },
       {
         path: "/blog",

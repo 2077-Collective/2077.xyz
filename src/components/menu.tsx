@@ -67,6 +67,9 @@ export default function NavMenu({
                 >
                   Technicals <ArrowRightIcon />
                 </button>
+                <Link onClick={() => setOpen(false)} to="/support">
+                  Support us
+                </Link>
               </>
             )}
             {depth == 1 && (
