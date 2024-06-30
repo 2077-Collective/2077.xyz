@@ -136,10 +136,6 @@ export default function App() {
                 Lack of marketing
               </span>
             </p>
-            <p className="font-semibold text-3xl">
-              Ethereum marketing department?{" "}
-              <span className="line-through">ERC</span> Error 404
-            </p>
             <p>
               There's an established community of researchers and developers
               focused on building and scaling Ethereum,{" "}
