@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider.tsx";
 import Root, { ErrorElement } from "./Root.tsx";
 import BlogPost from "./components/BlogPostDisplay.tsx";
 import { NextUIProvider } from "@nextui-org/react";
-import TagPosts from "./Tag.tsx";
+import TagPosts from "./pages/Tag.tsx";
 import About from "./pages/About.tsx";
 import Values from "./pages/Values.tsx";
 

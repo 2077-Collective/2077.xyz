@@ -7,10 +7,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Separator } from "./components/ui/separator";
-import BlogData from "./pages/BlogData";
-import { badgeVariants } from "./components/ui/badge";
-import BlogCard from "./components/BlogCard";
+import { Separator } from "../components/ui/separator";
+import BlogData from "./BlogData";
+import { badgeVariants } from "../components/ui/badge";
+import BlogCard from "../components/BlogCard";
 
 export default function TagPosts() {
   const loaderData = useRouteLoaderData("blog") as BlogData;
@@ -68,7 +68,7 @@ export default function TagPosts() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <h1 className="text-4xl font-semibold py-4">Blog</h1>
+      <h1 className="text-4xl font-semibold py-4">{tag}</h1>
       <div className="mb-4">
         <h2 className="text-2xl font-semibold py-2">See other tags</h2>
         {tags}
