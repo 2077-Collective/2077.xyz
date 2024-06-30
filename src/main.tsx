@@ -8,7 +8,6 @@ import "@fontsource-variable/manrope";
 import { ThemeProvider } from "@/components/theme-provider.tsx";
 import Root, { ErrorElement } from "./Root.tsx";
 import BlogPost from "./components/BlogPostDisplay.tsx";
-import { NextUIProvider } from "@nextui-org/react";
 import TagPosts from "./pages/Tag.tsx";
 import About from "./pages/About.tsx";
 import Values from "./pages/Values.tsx";
@@ -95,9 +94,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <NextUIProvider>
-        <RouterProvider router={router} />
-      </NextUIProvider>
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );
