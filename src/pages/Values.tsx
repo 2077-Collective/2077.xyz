@@ -29,8 +29,8 @@ export default function Values() {
         <div>
           <h2 className="text-3xl font-semibold mb-2">Flexibility</h2>
           <p className="text-xl">
-            We are not a traditional startup with bells and whistles. Crypto
-            makes it possible for Internet strangers to coordinate with
+            We are not a traditional organization with bells and whistles.
+            Crypto makes it possible for Internet strangers to coordinate with
             strangers on the Internet and pull off impressive feats. We provide
             maximum flexibility for contributors: the only requirement is to
             operate and deliver consistently.
