@@ -9,6 +9,8 @@ import { ModeToggle } from "./components/ui/mode-toggle";
 import { Link, useRouteError } from "react-router-dom";
 import { ReactNode, useState } from "react";
 import NavMenu from "./components/menu";
+import FarcasterBlackIcon from "./assets/farcaster-black.svg";
+import FarcasterWhiteIcon from "./assets/farcaster-white.svg";
 
 export default function Root({ children }: { children: ReactNode }) {
   const { scrollYProgress } = useScroll();
@@ -31,6 +33,15 @@ export default function Root({ children }: { children: ReactNode }) {
           <Button variant="secondary" asChild>
             <Link to="https://x.com/2077Collective">
               <TwitterLogoIcon className="w-6 h-6" />
+            </Link>
+          </Button>
+          <Button variant="secondary" asChild>
+            <Link to="https://www.farcaster.id/c/2077collective">
+              <img src={FarcasterBlackIcon} className="w-6 h-6 dark:hidden" />
+              <img
+                src={FarcasterWhiteIcon}
+                className="w-6 h-6 hidden dark:block"
+              />
             </Link>
           </Button>
         </div>
