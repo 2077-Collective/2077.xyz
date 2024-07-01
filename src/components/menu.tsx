@@ -65,7 +65,7 @@ export default function NavMenu({
                   className="text-left flex flex-row items-center gap-2"
                   onClick={() => setDepth(1)}
                 >
-                  Technicals <ArrowRightIcon />
+                  Resources <ArrowRightIcon />
                 </button>
                 <Link onClick={() => setOpen(false)} to="/support">
                   Support us
