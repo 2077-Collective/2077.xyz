@@ -47,11 +47,7 @@ export default function Support() {
           <li>
             Send donations to{" "}
             <code className="py-1 px-2 rounded mx-1 bg-zinc-200 dark:bg-zinc-800">
-              lynett.eth
-            </code>{" "}
-            or{" "}
-            <code className="py-1 px-2 rounded mx-1 bg-zinc-200 dark:bg-zinc-800">
-              0xC2f3F2c8084d6bc40887B0B867353d280e3D742D
+              2077collective.eth
             </code>
             <p className="text-base">
               (if you want to be added to the supporters list on the main page,
