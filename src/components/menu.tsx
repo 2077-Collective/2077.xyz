@@ -82,6 +82,7 @@ export default function NavMenu({
                 </button>
                 <Link to="https://eip2077.info">EIP-2077</Link>
                 <Link to="https://eips.wiki">EIP Wiki</Link>
+                <Link to="https://research.2077.xyz">2077 Research</Link>
                 <Link to="https://etherpedia.2077.xyz">Etherpedia</Link>
               </>
             )}
