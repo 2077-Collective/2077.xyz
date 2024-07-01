@@ -46,11 +46,11 @@ export default function Support() {
           <li>Spread the word about 2077 Collective</li>
           <li>
             Send donations to{" "}
-            <code className="py-1 px-2 rounded mx-1 bg-zinc-800">
+            <code className="py-1 px-2 rounded mx-1 bg-zinc-200 dark:bg-zinc-800">
               lynett.eth
             </code>{" "}
             or{" "}
-            <code className="py-1 px-2 rounded mx-1 bg-zinc-800">
+            <code className="py-1 px-2 rounded mx-1 bg-zinc-200 dark:bg-zinc-800">
               0xC2f3F2c8084d6bc40887B0B867353d280e3D742D
             </code>
             <p className="text-base">
