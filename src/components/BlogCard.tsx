@@ -32,7 +32,9 @@ export default function BlogCard({
           <p className="text-sm">
             <b>By {author}</b>
 
-            <span className="ml-4">{new Date(time).toLocaleString()}</span>
+            <span className="ml-4">
+              {new Date(time * 1000).toLocaleString()}
+            </span>
           </p>
         </CardHeader>
         <CardFooter>
