@@ -56,7 +56,7 @@ export default function App() {
         </p>
         <div className="mt-4 gap-2 flex flex-col sm:flex-row text-lg font-mono select-none">
           <Button variant="secondary" asChild>
-            <a href="https://discord.com/invite/7cFD4ca9" className="space-x-2">
+            <a href="https://discord.com/invite/mfYyNJbaU5" className="space-x-2">
               <DiscordLogoIcon className="w-6 h-6" />
               <span>JOIN THE DISCORD</span>
             </a>

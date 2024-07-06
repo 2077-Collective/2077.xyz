@@ -26,7 +26,7 @@ export default function Root({ children }: { children: ReactNode }) {
           </Button>{" "}
           <ModeToggle className="sm:w-full" />
           <Button variant="secondary" asChild>
-            <Link to="https://discord.com/invite/7cFD4ca9">
+            <Link to="https://discord.com/invite/mfYyNJbaU5">
               <DiscordLogoIcon className="w-6 h-6" />
             </Link>
           </Button>

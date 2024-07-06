@@ -79,7 +79,7 @@ const router = createBrowserRouter([
               }
               const r = await fetch(
                 "https://raw.githubusercontent.com/2077-Collective/blog/master/" +
-                  file
+                file
               );
 
               return await r.text();
@@ -92,9 +92,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </React.StrictMode>
 );
