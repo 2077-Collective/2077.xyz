@@ -67,7 +67,7 @@ export default function About() {
             I'm sold. How do I get involved?
           </h2>
           <p className="text-xl">
-            <a href="https://discord.com/invite/7cFD4ca9" className="underline">
+            <a href="https://discord.com/invite/mfYyNJbaU5" className="underline">
               Join our Discord server
             </a>{" "}
             and contribute!

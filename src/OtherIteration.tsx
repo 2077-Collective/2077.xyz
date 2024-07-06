@@ -25,7 +25,7 @@ function App2() {
           <p className="max-w-xl text-xl">we make ethereum cool again</p>
           <div className="flex flex-row mt-4 gap-2 text-xl">
             <Button asChild>
-              <a href="https://discord.com/invite/7cFD4ca9">
+              <a href="https://discord.com/invite/mfYyNJbaU5">
                 <DiscordLogoIcon className="mr-2 h-6 w-6" />
                 Discord
               </a>
@@ -108,7 +108,7 @@ function App2() {
           <p className="text-4xl font-medium">Well, that's what we are.</p>
           <div className="space-x-4">
             <Button asChild>
-              <a href="https://discord.com/invite/7cFD4ca9">
+              <a href="https://discord.com/invite/mfYyNJbaU5">
                 <DiscordLogoIcon className="mr-2 h-6 w-6" />
                 Discord
               </a>
