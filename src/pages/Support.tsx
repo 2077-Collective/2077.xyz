@@ -35,7 +35,7 @@ export default function Support() {
         <ul className="text-xl space-y-2 mt-2 list-disc list-inside">
           <li>
             <a
-              href="https://discord.com/invite/mfYyNJbaU5"
+              href="https://discord.gg/2077collective"
               className="underline hover:text-green-500 underline-offset-4"
             >
               Join our Discord server
