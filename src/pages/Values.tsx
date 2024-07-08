@@ -25,7 +25,9 @@ export default function Values() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <h1 className="text-4xl font-semibold">Our values</h1>
+        <h1 id="dynamic-title" className="text-4xl font-semibold">
+          Our values
+        </h1>
         <div>
           <h2 className="text-3xl font-semibold mb-2">Flexibility</h2>
           <p className="text-xl">
