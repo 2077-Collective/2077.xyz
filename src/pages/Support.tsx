@@ -25,7 +25,9 @@ export default function Support() {
         </BreadcrumbList>
       </Breadcrumb>
       <section className="max-w-screen-lg mt-4">
-        <h1 className="text-4xl font-semibold mb-4">Support us</h1>
+        <h1 id="dynamic-title" className="text-4xl font-semibold mb-4">
+          Support us
+        </h1>
         <p className="text-xl">
           If you're a fan of our work, join us in our mission to build and
           maintain Ethereum marketing!

@@ -6,8 +6,8 @@ import {
 import { motion, useScroll } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { ModeToggle } from "./components/ui/mode-toggle";
-import { Link, useRouteError } from "react-router-dom";
-import { ReactNode, useState } from "react";
+import { Link, useLocation, useRouteError } from "react-router-dom";
+import { ReactNode, useEffect, useState } from "react";
 import NavMenu from "./components/menu";
 import FarcasterBlackIcon from "./assets/farcaster-black.svg";
 import FarcasterWhiteIcon from "./assets/farcaster-white.svg";
@@ -15,6 +15,14 @@ import FarcasterWhiteIcon from "./assets/farcaster-white.svg";
 export default function Root({ children }: { children: ReactNode }) {
   const { scrollYProgress } = useScroll();
   const [open, setOpen] = useState(false);
+  let location = useLocation();
+
+  useEffect(() => {
+    document.title =
+      document.getElementById("dynamic-title")?.innerText ||
+      "2077 Collective - Ethereum's Unofficial Marketing Department";
+    return () => {};
+  }, [location]);
 
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col sm:flex-row overflow-hidden">

@@ -58,7 +58,9 @@ export default function Blog() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <h1 className="text-4xl font-semibold py-4">Blog</h1>
+      <h1 id="dynamic-title" className="text-4xl font-semibold py-4">
+        Blog
+      </h1>
       <div className="mb-4">
         <h2 className="text-2xl font-semibold py-2">Tags</h2>
         {tags}

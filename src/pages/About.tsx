@@ -25,7 +25,9 @@ export default function About() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <h1 className="text-4xl font-semibold">About us</h1>
+        <h1 id="dynamic-title" className="text-4xl font-semibold">
+          About us
+        </h1>
         <div>
           <h2 className="text-3xl font-semibold mb-2">
             What is the 2077 Collective?
