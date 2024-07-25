@@ -1,7 +1,7 @@
 import { useLoaderData, useRouteLoaderData } from "react-router";
 import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
-import BlogData from "../pages/BlogData";
+import BlogData from "../pages/react/BlogData";
 import {
   Breadcrumb,
   BreadcrumbList,

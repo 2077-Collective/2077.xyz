@@ -1,10 +1,25 @@
 import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/components/theme-provider";
+import React from "react";
 
 export function ModeToggle({ className }: { className?: string }) {
-  const { setTheme, theme } = useTheme();
+  const [theme, setThemeState] = React.useState<"light" | "dark" | "system">(
+    "dark"
+  );
+
+  React.useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    setThemeState(isDarkMode ? "dark" : "light");
+  }, []);
+
+  React.useEffect(() => {
+    const isDark =
+      theme === "dark" ||
+      (theme === "system" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+  }, [theme]);
 
   return (
     <Button
@@ -13,9 +28,9 @@ export function ModeToggle({ className }: { className?: string }) {
       className={className ?? ""}
       onClick={() => {
         if (theme == "light") {
-          setTheme("dark");
+          setThemeState("dark");
         } else {
-          setTheme("light");
+          setThemeState("light");
         }
       }}
     >

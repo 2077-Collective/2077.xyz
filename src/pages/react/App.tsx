@@ -19,12 +19,17 @@ import {
   ReaderIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
-import { useTheme } from "@/components/theme-provider";
 import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function App() {
-  const { theme } = useTheme();
+  const [theme, setThemeState] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    setThemeState(
+      document.documentElement.classList.contains("dark") ? "dark" : "light"
+    );
+  }, []);
 
   return (
     <div className="max-w-screen-xl mx-auto">
@@ -32,7 +37,7 @@ export default function App() {
         <h1 className="text-3xl">We are the 2077 Collective.</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/60 text-xl">
           <h1>Nosotros somos el Colectivo 2077.</h1>
-          <h1> Wir sind das 2077 Kollektiv.</h1>
+          <h1>Wir sind das 2077 Kollektiv.</h1>
           <h1>我们是 2077 集体。</h1>
           <h1>Мы Коллектив 2077.</h1>
           <h1>نحن مجموعة 2077.</h1>
@@ -68,16 +73,16 @@ export default function App() {
             </a>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to="/blog" className="space-x-2">
+            <a href="/blog" className="space-x-2">
               <ReaderIcon className="w-6 h-6" />
               <span>READ THE BLOG</span>
-            </Link>
+            </a>
           </Button>
         </div>
         <div className="hidden sm:block select-none">
           <img
             className=" w-1/2 absolute top-0 right-0 -mr-48 lg:-mr-64"
-            src={ethLogoCircle}
+            src={ethLogoCircle.src}
           />
           <motion.img
             animate={{ rotate: 360 }}
@@ -87,7 +92,7 @@ export default function App() {
               duration: 60,
             }}
             className=" w-1/2 absolute top-0 right-0 -mr-48 lg:-mr-64"
-            src={theme == "dark" ? outerCircle : darkOuterCircle}
+            src={theme == "dark" ? outerCircle.src : darkOuterCircle.src}
           />
           <motion.img
             animate={{ rotate: -360 }}
@@ -97,7 +102,7 @@ export default function App() {
               duration: 50,
             }}
             className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
-            src={theme == "dark" ? midCircle : darkMidCircle}
+            src={theme == "dark" ? midCircle.src : darkMidCircle.src}
           />
           <motion.img
             animate={{ rotate: 360 }}
@@ -107,7 +112,7 @@ export default function App() {
               duration: 40,
             }}
             className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
-            src={theme == "dark" ? innerCircle : darkInnerCircle}
+            src={theme == "dark" ? innerCircle.src : darkInnerCircle.src}
           />
         </div>
       </header>
@@ -257,7 +262,7 @@ export default function App() {
 
       <section className="mx-8 mt-8 mb-8">
         <img
-          src={sponsors}
+          src={sponsors.src}
           className="max-w-screen-md w-full mx-auto border border-foreground"
         />
       </section>
@@ -333,11 +338,11 @@ export default function App() {
       </section>
       <footer className="pt-64">
         <img
-          src={theme == "light" ? blackLogo : whiteLogo}
+          src={theme == "light" ? blackLogo.src : whiteLogo.src}
           className="max-h-32 mx-auto mb-8 hidden sm:block"
         />
         <img
-          src={theme == "light" ? blackIconLogo : whiteIconLogo}
+          src={theme == "light" ? blackIconLogo.src : whiteIconLogo.src}
           className="max-h-32 mx-auto mb-8 block sm:hidden"
         />
         <Marquee className="w-full font-mono select-none">

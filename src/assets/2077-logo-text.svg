@@ -2,7 +2,7 @@
 <svg width="2942px" height="873px" viewBox="0 0 2942 873" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Logo 2077 Collective</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Logo-2077-Collective" fill="#ffffff">
+        <g id="Logo-2077-Collective" class="fill-red-500 dark:fill-white">
             <g id="Icon---Black" transform="translate(234.500000, 436.500000) scale(1, -1) translate(-234.500000, -436.500000) ">
                 <polygon id="Path-43-Copy-26" points="2.99684011 70.494144 74.8911355 6.01698001e-16 469 394.515291 397.086793 465.009435"></polygon>
                 <polygon id="Path-43-Copy-25" points="2.99684011 275.989392 74.8911355 205.495248 469 600.010539 397.086793 670.504683"></polygon>

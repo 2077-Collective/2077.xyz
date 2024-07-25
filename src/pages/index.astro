@@ -1,0 +1,362 @@
+---
+import Base from "@/layouts/Base.astro";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@radix-ui/react-dropdown-menu";
+import {
+  DiscordLogoIcon,
+  TwitterLogoIcon,
+  ReaderIcon,
+} from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
+import { ExternalLinkIcon } from "lucide-react";
+import Marquee from "react-fast-marquee";
+
+import ethLogoCircle from "@/assets/eth-logo-circle.svg?raw";
+import innerCircle from "@/assets/inner-circle.svg?raw";
+import midCircle from "@/assets/mid-circle.svg?raw";
+import outerCircle from "@/assets/outer-circle.svg?raw";
+
+import logo from "@/assets/2077-logo-text.svg?raw";
+import iconLogo from "@/assets/2077-logo.svg?raw";
+
+import sponsors from "@/assets/sponsors.svg";
+---
+
+<Base>
+  <div class="max-w-screen-xl mx-auto">
+    <header class="p-8 relative w-full pb-80 max-sm:h-screen">
+      <h1 class="text-3xl">We are the 2077 Collective.</h1>
+      <div
+        class="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/60 text-xl"
+      >
+        <h1>Nosotros somos el Colectivo 2077.</h1>
+        <h1>Wir sind das 2077 Kollektiv.</h1>
+        <h1>我们是 2077 集体。</h1>
+        <h1>Мы Коллектив 2077.</h1>
+        <h1>نحن مجموعة 2077.</h1>
+      </div>
+      <p class="mt-8 font-bold text-xl max-w-xl">
+        <span>We are</span>{" "}
+        <span class="bg-pink-400 dark:bg-pink-700 px-1 inline-block">
+          creatives
+        </span>
+        ,
+        <span class="bg-blue-400 dark:bg-blue-700 px-1 inline-block">
+          researchers
+        </span>
+        ,
+        <span class="bg-green-400 dark:bg-green-700 px-1 inline-block">
+          marketers
+        </span>
+        , and{" "}
+        <span class="bg-orange-600 px-1 inline-block">developers</span>{" "}
+        all working to make Ethereum cool again.
+      </p>
+      <div
+        class="mt-4 gap-2 flex flex-col sm:flex-row text-lg font-mono select-none"
+      >
+        <Button variant="secondary" asChild client:load>
+          <a href="https://discord.gg/2077collective" class="space-x-2">
+            <DiscordLogoIcon className="w-6 h-6" />
+            <span>JOIN THE DISCORD</span>
+          </a>
+        </Button>
+        <Button variant="secondary" asChild>
+          <a href="https://x.com/2077Collective" class="space-x-2">
+            <TwitterLogoIcon className="w-6 h-6" />
+            <span>FOLLOW US ON X</span>
+          </a>
+        </Button>
+        <Button variant="secondary" asChild>
+          <a href="/blog" class="space-x-2">
+            <ReaderIcon className="w-6 h-6" />
+            <span>READ THE BLOG</span>
+          </a>
+        </Button>
+      </div>
+      <div class="hidden sm:block select-none">
+        <div class="w-1/2 absolute top-0 right-0 -mr-48 lg:-mr-64">
+          <Fragment set:html={ethLogoCircle} />
+        </div>
+      </div>
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{
+          repeat: Infinity,
+          ease: "linear",
+          duration: 60,
+        }}
+        client:load
+        className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
+      >
+        <Fragment set:html={outerCircle} />
+      </motion.div>
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{
+          repeat: Infinity,
+          ease: "linear",
+          duration: 50,
+        }}
+        client:load
+        className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
+      >
+        <Fragment set:html={midCircle} />
+      </motion.div>
+      <motion.div
+        client:load
+        animate={{ rotate: 360 }}
+        transition={{
+          repeat: Infinity,
+          ease: "linear",
+          duration: 40,
+        }}
+        client:load
+        className="absolute w-1/2 top-0 right-0 -mr-48 lg:-mr-64"
+      >
+        <Fragment set:html={innerCircle} />
+      </motion.div>
+    </header>
+  </div>
+  <section class="mx-8 mb-48 text-2xl max-w-screen-lg space-y-4">
+    <p>
+      <b>We believe</b> that crypto has the potential to give people across the world
+      almost unimaginable levels of freedom and autonomy.
+    </p>
+    <p>
+      <b>Our vision</b> is of a world where everyone has individual sovereignty,
+      economic freedom and ownership of the infrastructure that supports them.
+    </p>
+    <p>
+      <b>Our mission</b> is to accelerate Ethereum adoption, because for this vision
+      to materialize, crypto must be built on a truly decentralized and permissionless
+      base layer.
+    </p>
+  </section>
+  <section class="mx-8">
+    <div class="flex flex-col lg:flex-row gap-y-4 gap-x-8">
+      <div class="block lg:max-w-xl space-y-4 text-lg">
+        <p class="font-semibold text-4xl">
+          Ethereum's big problem:
+          <span class="block underline underline-offset-4">
+            Lack of marketing
+          </span>
+        </p>
+        <p>
+          There's an established community of researchers and developers focused
+          on building and scaling Ethereum,{" "}
+          <b>but there's no unified community focused on promoting it.</b>{" "}
+          Independent marketing projects at the L2 or dapp/infrastructure layer—while
+          net positive and beneficial for Ethereum—tend to be self-interested and
+          ultimately focused on one specific (albeit important) piece of the puzzle
+          they have an interest in.
+        </p>
+        <p class="font-semibold text-3xl">A (visible) narrative vacuum</p>
+        <p>
+          The people whose voices really matter—core developers, researchers,
+          builders—are often quiet. The empty space is filled with competitor
+          noise, which is often intellectually dishonest. This shapes the
+          world's view of Ethereum without anyone to credibly counteract the
+          psyops, dispel misinformation, and proactively share good narratives
+          about Ethereum with the world.
+        </p>
+        <p class="font-semibold text-3xl">Focus on the wrong things</p>
+        <p>
+          Too much of the Ethereum community's energy is spent in tribal
+          arguments on crypto-Twitter, or talking to other crypto natives.
+          Having circular arguments about the investment case or esoteric
+          technical debates is not useful after a point. For most people,
+          <b>
+            energy is better spent showing the world what users can do with
+            Ethereum <i>right now</i> and getting people on-chain.
+          </b>
+        </p>
+      </div>
+
+      <Separator className="my-4 lg:hidden" />
+      <div class="italic">
+        <p class="font-black">SYMPTOMS OF MARKETING DEFICIENCY</p>
+
+        <ul
+          class="text-lg text-transparent bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text"
+        >
+          <li>Being perceived as old and useless technology.</li>
+          <li>Elite builders not getting enough attention.</li>
+          <li>The crypto narrative controlled by alt-L1s.</li>
+          <li>Influencers waging information warfare and spreading FUD.</li>
+          <li>Competing innovations stealing the spotlight.</li>
+        </ul>
+        <p class="max-w-sm text-sm text-foreground/50 mt-4">
+          If you are feeling any of these symptoms, please go to the 2077
+          Collective immediately.
+        </p>
+      </div>
+    </div>
+  </section>
+  <Separator className="my-16" />
+
+  <section class="mx-8 my-8">
+    <h1 class="text-4xl mb-4">
+      We are Ethernauts making Ethereum cool again and solving ETH's marketing
+      problem.
+    </h1>
+    <p class="mb-4 text-xl">
+      The 2077 Collective has authored EIP-2077: Ethereum Marketing Department
+      to prescribe a strategy for marketing the Ethereum brand online and IRL.
+      EIP-2077 provides a blueprint that guides 2077 Collective's marketing
+      efforts:
+    </p>
+    <ol class="space-y-2 font-mono max-w-screen-sm">
+      <li class="flex">
+        <div
+          class="px-2 py-1 text-xl bg-red-500 border border-foreground h-min mr-2"
+        >
+          1
+        </div>
+        <span>
+          <b>Fill the gap:</b> Establish consensus on core marketing problems, create
+          public good infrastructure to tackle marketing problems, and forge relationships
+          between builders and marketers.
+        </span>
+      </li>
+      <li class="flex">
+        <div
+          class="px-2 py-1 text-xl bg-yellow-500 border border-foreground h-min mr-2"
+        >
+          2
+        </div>
+
+        <span>
+          <b>Control the narrative:</b> Ethpill newcomers, defend Ethereum from FUD
+          + psyops, and amplify the voices of protocol devs, researchers, and builders.
+        </span>
+      </li>
+      <li class="flex">
+        <div
+          class="px-2 py-1 text-xl bg-green-500 border border-foreground h-min mr-2"
+        >
+          3
+        </div>
+        <span>
+          <b>Correct the focus:</b> Bring more people on-chain, increase % of builders
+          in the Ethereum ecosystem, and create tools + resources to onboard users/devs.
+        </span>
+      </li>
+      <li class="flex">
+        <div
+          class="px-2 py-1 text-xl bg-blue-500 border border-foreground h-min mr-2"
+        >
+          4
+        </div>
+        <span>
+          <b>Promote the ecosystem:</b> Increase mindshare, adoption, and investment
+          in Ethereum through coordinated marketing efforts in the ecosystem and
+          educate users, builders, and businesses about Ethereum L1/L2s.
+        </span>
+      </li>
+    </ol>
+  </section>
+
+  <section class="mx-8 my-8">
+    <label>
+      <div
+        class="w-full h-96 bg-center bg-anime-girl bg-cover rounded-3xl border border-foreground"
+      >
+      </div>
+      <p class="text-center text-muted-foreground">
+        A real unedited photograph of an Ethernaut in their natural habitat.
+      </p>
+    </label>
+  </section>
+
+  <section class="mx-8 mt-8 mb-8">
+    <img
+      src={sponsors.src}
+      class="max-w-screen-md w-full mx-auto border border-foreground"
+    />
+  </section>
+  <section class="w-full flex flex-row justify-center">
+    <div class="p-4">
+      <p class="text-xl">
+        A huge thanks to our supporters for making 2077 possible:
+      </p>
+      <div class="flex flex-row gap-4">
+        <ol class="list-disc list-inside">
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.spire.dev/">Spire Labs</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.eigenlayer.xyz/">EigenLayer</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.starknet.io/">StarkNet</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="http://megaeth.systems/">MegaETH</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+        </ol>
+        <ol class="list-disc list-inside">
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.abcde.com/">ABCDE</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.metalex.tech/">MetaLeX</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://x.com/0xshake">Bo Du</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://x.com/jamesyoung">James Young</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+        </ol>
+        <ol class="list-disc list-inside">
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.azuki.com">Azuki</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://www.light.so">Light.so</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1">Johannes</li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://fuel.network">Fuel Labs</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+        </ol>
+        <ol class="list-disc list-inside">
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://x.com/DeFiDave22">DeFi Dave</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+          <li class="space-x-1 hover:text-green-400 underline">
+            <a href="https://x.com/shunkakinoki">Shun Kakinoki</a>
+            <ExternalLinkIcon className="inline" />
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <footer class="pt-64">
+    <div class="max-h-32 mx-auto mb-8 hidden sm:block">
+      <Fragment set:html={logo} />
+    </div>
+    <Fragment
+      set:html={iconLogo}
+      class="max-h-32 mx-auto mb-8 block sm:hidden"
+    />
+    <Marquee client:only className="w-full font-mono select-none">
+      MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL
+      AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL
+      AGAIN|MAKE ETHEREUM COOL AGAIN|MAKE ETHEREUM COOL AGAIN
+    </Marquee>
+  </footer>
+</Base>

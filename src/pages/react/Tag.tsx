@@ -7,10 +7,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Separator } from "../components/ui/separator";
+import { Separator } from "../../components/ui/separator";
 import BlogData from "./BlogData";
-import { badgeVariants } from "../components/ui/badge";
-import BlogCard from "../components/BlogCard";
+import { badgeVariants } from "../../components/ui/badge";
+import BlogCard from "../../components/BlogCard";
 
 export default function TagPosts() {
   const loaderData = useRouteLoaderData("blog") as BlogData;
