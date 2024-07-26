@@ -266,7 +266,7 @@ export default function App() {
           <p className="text-xl">
             A huge thanks to our supporters for making 2077 possible:
           </p>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 underline-offset-4">
             <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://www.spire.dev/">Spire Labs</a>
