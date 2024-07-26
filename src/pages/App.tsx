@@ -273,6 +273,10 @@ export default function App() {
                 <ExternalLinkIcon className="inline" />
               </li>
               <li className="space-x-1 hover:text-green-400 underline">
+                <a href="https://vitalik.eth.limo/">Vitalik Buterin</a>
+                <ExternalLinkIcon className="inline" />
+              </li>
+              <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://www.eigenlayer.xyz/">EigenLayer</a>
                 <ExternalLinkIcon className="inline" />
               </li>
@@ -280,12 +284,12 @@ export default function App() {
                 <a href="https://www.starknet.io/">StarkNet</a>
                 <ExternalLinkIcon className="inline" />
               </li>
+            </ol>
+            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="http://megaeth.systems/">MegaETH</a>
                 <ExternalLinkIcon className="inline" />
               </li>
-            </ol>
-            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://www.abcde.com/">ABCDE</a>
                 <ExternalLinkIcon className="inline" />
@@ -298,12 +302,12 @@ export default function App() {
                 <a href="https://x.com/0xshake">Bo Du</a>
                 <ExternalLinkIcon className="inline" />
               </li>
+            </ol>
+            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://x.com/jamesyoung">James Young</a>
                 <ExternalLinkIcon className="inline" />
               </li>
-            </ol>
-            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://www.azuki.com">Azuki</a>
                 <ExternalLinkIcon className="inline" />
@@ -313,12 +317,12 @@ export default function App() {
                 <ExternalLinkIcon className="inline" />
               </li>
               <li className="space-x-1">Johannes</li>
+            </ol>
+            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://fuel.network">Fuel Labs</a>
                 <ExternalLinkIcon className="inline" />
               </li>
-            </ol>
-            <ol className="list-disc list-inside">
               <li className="space-x-1 hover:text-green-400 underline">
                 <a href="https://x.com/DeFiDave22">DeFi Dave</a>
                 <ExternalLinkIcon className="inline" />
