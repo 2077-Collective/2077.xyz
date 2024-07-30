@@ -12,6 +12,8 @@ import TagPosts from "./pages/Tag.tsx";
 import About from "./pages/About.tsx";
 import Values from "./pages/Values.tsx";
 import Support from "./pages/Support.tsx";
+import Projects from "./pages/Projects.tsx";
+import { CategoryList } from "./components/projects/CategoryList.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "/values",
         element: <Values />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/category-eips",
+        element: <CategoryList Category="EIPs" maxDisplay={4} />,
       },
       {
         path: "/support",
@@ -79,7 +89,7 @@ const router = createBrowserRouter([
               }
               const r = await fetch(
                 "https://raw.githubusercontent.com/2077-Collective/blog/master/" +
-                file
+                  file
               );
 
               return await r.text();
@@ -92,9 +102,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </React.StrictMode>
 );
