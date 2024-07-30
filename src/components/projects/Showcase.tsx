@@ -1,6 +1,5 @@
 import React from "react";
 import Info from "./Info";
-import { Link } from "react-router-dom";
 
 export default function Showcase({
   src,
@@ -14,13 +13,13 @@ export default function Showcase({
   link: string;
 }) {
   return (
-    <Link to={`/projects/:showcase`} className="p-2 mx-auto">
+    <div className="mx-auto flex flex-col">
       <img
         src={src}
         width={250}
         className="border-[1px] rounded-md border-gray-600"
       />
       <Info text={text} source={source} link={link} />
-    </Link>
+    </div>
   );
 }

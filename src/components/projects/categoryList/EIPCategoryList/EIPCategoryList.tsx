@@ -1,21 +1,21 @@
 import { Separator } from "@radix-ui/react-separator";
-import React from "react";
-import Showcase from "./Showcase";
+import React, { useState } from "react";
+import Showcase from "../../Showcase";
+import { Link } from "react-router-dom";
+import ModalComponent from "../../ModalComponent";
 
 interface CategoryListProps {
-  Category: string;
-  id?: number;
-  src?: string;
-  text?: string;
-  source?: string;
-  link?: string;
-  maxDisplay: number;
+  id: number;
+  src: string;
+  text: string;
+  source: string;
+  link: string;
 }
-export const showcaseArr = [
+export const showcaseArr: CategoryListProps[] = [
   {
     id: 1,
     src: "https://img.freepik.com/free-vector/flat-design-staking-illustration_23-2149402202.jpg?ga=GA1.1.1643460944.1721044067&semt=ais_hybrid",
-    text: "Ethereum Blockchain",
+    text: "Ethereum",
     source: "Freepik",
     link: "https://www.ethereum.org",
   },
@@ -36,7 +36,7 @@ export const showcaseArr = [
   {
     id: 4,
     src: "https://img.freepik.com/free-vector/flat-design-staking-illustration_23-2149402202.jpg?ga=GA1.1.1643460944.1721044067&semt=ais_hybrid",
-    text: "Ethereum Blockchain",
+    text: "Ethereum",
     source: "Freepik",
     link: "https://www.ethereum.org",
   },
@@ -50,7 +50,7 @@ export const showcaseArr = [
   {
     id: 6,
     src: "https://img.freepik.com/free-vector/flat-design-staking-illustration_23-2149402202.jpg?ga=GA1.1.1643460944.1721044067&semt=ais_hybrid",
-    text: "Ethereum Blockchain",
+    text: "Ethereum",
     source: "Freepik",
     link: "https://www.ethereum.org",
   },
@@ -70,15 +70,27 @@ export const showcaseArr = [
   },
 ];
 
-export const CategoryList: React.FC<CategoryListProps> = ({
-  Category,
-  maxDisplay,
-}) => {
+export const EIPCategoryList: React.FC<CategoryListProps> = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<CategoryListProps | null>(
+    null
+  );
+
+  const openModal = (item: CategoryListProps) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
+
   return (
     <div>
       <div className="flex justify-between">
         <h1 id="dynamic-title" className="text-4xl font-semibold py-4">
-          {Category}
+          EIPs
         </h1>
         <div className="flex justify-between items-center">
           <input
@@ -94,29 +106,24 @@ export const CategoryList: React.FC<CategoryListProps> = ({
       <Separator />
       <div className="grid grid-cols-4">
         {showcaseArr.map((showcase, index) => {
-          if (maxDisplay != 0 && index < maxDisplay) {
-            return (
+          return (
+            <div key={index} onClick={() => openModal(showcase)}>
               <Showcase
-                key={showcase.id}
                 src={showcase.src}
                 text={showcase.text}
                 source={showcase.source}
                 link={showcase.link}
               />
-            );
-          } else {
-            return (
-              <Showcase
-                key={showcase.id}
-                src={showcase.src}
-                text={showcase.text}
-                source={showcase.source}
-                link={showcase.link}
-              />
-            );
-          }
+            </div>
+          );
         })}
       </div>
+      <ModalComponent
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Project Details"
+        data={selectedItem}
+      />
     </div>
   );
 };

@@ -13,7 +13,7 @@ import About from "./pages/About.tsx";
 import Values from "./pages/Values.tsx";
 import Support from "./pages/Support.tsx";
 import Projects from "./pages/Projects.tsx";
-import { CategoryList } from "./components/projects/CategoryList.tsx";
+import { EIPCategoryList } from "./components/projects/categoryList/EIPCategoryList/EIPCategoryList.tsx";
 
 const router = createBrowserRouter([
   {
@@ -42,8 +42,10 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "/category-eips",
-        element: <CategoryList Category="EIPs" maxDisplay={4} />,
+        path: "/eip-categories",
+        element: (
+          <EIPCategoryList id={0} src={""} text={""} source={""} link={""} />
+        ),
       },
       {
         path: "/support",

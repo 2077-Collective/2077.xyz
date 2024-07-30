@@ -1,3 +1,4 @@
+import React from "react";
 import Categories from "@/components/projects/Categories";
 import {
   Breadcrumb,
@@ -8,7 +9,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Projects() {
@@ -43,14 +43,16 @@ export default function Projects() {
         </div>
       </div>
       <Separator />
-      <section className="hero">
+      <section className="my-8">
         <h1>Explore Ethereum Projects</h1>
         <p>
           Discover and contribute to open-source Ethereum projects built by the
           community.
         </p>
-        <Categories description="EIPs" />
       </section>
+      <Separator />
+
+      <Categories description="EIPs" />
     </div>
   );
 }
