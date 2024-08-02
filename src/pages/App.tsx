@@ -32,7 +32,8 @@ export default function App() {
         <h1 className="text-3xl">We are the 2077 Collective.</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/60 text-xl">
           <h1>Nosotros somos el Colectivo 2077.</h1>
-          <h1> Wir sind das 2077 Kollektiv.</h1>
+          <h1>Wir sind das 2077 Kollektiv.</h1>
+          <h1>Nous sommes le Collectif 2077.</h1>
           <h1>我们是 2077 集体。</h1>
           <h1>Мы Коллектив 2077.</h1>
           <h1>نحن مجموعة 2077.</h1>
