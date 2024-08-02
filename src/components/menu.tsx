@@ -58,6 +58,9 @@ export default function NavMenu({
                 <Link onClick={() => setOpen(false)} to="/values">
                   Values
                 </Link>
+                <Link onClick={() => setOpen(false)} to="/projects">
+                  Ecosystem Projects
+                </Link>
                 <Link onClick={() => setOpen(false)} to="/blog">
                   Blog
                 </Link>
